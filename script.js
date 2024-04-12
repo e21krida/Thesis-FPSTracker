@@ -39,7 +39,7 @@
 
     setTimeout(() => {
         window.fpsTrackerActive = false;
-        const resultsJSON = JSON.stringify(fpsData, null, 2);
+        const resultsJSON = JSON.stringify(FPSData, null, 2);
         const blob = new Blob([resultsJSON], { type: 'application/json' });
         const downloadLink = document.createElement('a');
         downloadLink.href = URL.createObjectURL(blob);
