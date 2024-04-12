@@ -7,7 +7,7 @@
 // ==/UserScript==
 
 (function() {
-    const fpsData = [];
+    const FPSData = [];
     const times = [];
     let fps;
     function Loop() {
@@ -27,7 +27,7 @@
     }
 
     function addFPSData(name) {
-        fpsData.push({ name: name, value: getFPS() });
+        FPSData.push({ name: name, value: getFPS() });
     }
 
     window.addEventListener('logFPS', function(e) {
