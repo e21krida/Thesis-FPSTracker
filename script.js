@@ -6,7 +6,7 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     const FPSData = [];
     const times = [];
     let fps;
@@ -22,16 +22,16 @@
         });
     }
 
-    window.getFPS = function() {
+    window.getFPS = function () {
         return fps || 0;
     }
 
-    function addFPSData(name) {
-        FPSData.push({ name: name, value: getFPS() });
+    function addFPSData() {
+        FPSData.push(getFPS());
     }
 
-    window.addEventListener('logFPS', function(e) {
-        addFPSData(e.detail.name);
+    window.addEventListener('logFPS', function () {
+        addFPSData();
     });
 
     Loop();
